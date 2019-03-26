@@ -1,0 +1,1 @@
+INSERT INTO burger (burger,devour) VALUES ('cheeseburger',0);

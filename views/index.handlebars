@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="card" id="move">
+    <div class="card-body">
+      <h2>Add a Burger!</h2>
+      <form>
+
+        <div class="form-group">
+          <label for="bu">Burger Name:</label>
+          <input type="text" id="bu" name="name">
+        </div>
+
+
+
+        <button class="create-form" type="submit">Add Burger!</button>
+      </form>
+    </div>
+  </div>
+
+ 
+  
+  <div class="card" id="move">
+    <div class="card-body">
+      <h2>Burgers</h2>
+
+      {{#each burger}}
+      {{#unless devour}}
+      <div class="card">
+        <div class="card-body">
+          <p>{{this.burger}}</p> <button class="update-burger" id={{this.id}} data-state={{this.devour}}>devour</button>
+        </div>
+      </div>
+      {{/unless}}
+      {{/each}}
+
+    </div>
+  </div>
+  
+  <div class="card" id="move">
+    <div class="card-body">
+      <h2>Eaten Burgers</h2>
+
+      {{#each burger}}
+      {{#if devour}}
+      <button class="delete-burger" id={{this.id}}>{{this.burger}}</button> {{!-- s{{> cats/cat-block sleep=true}} --}}
+      {{/if}}
+      {{/each}}
+
+    </div>
+  </div>
+  
+</div>
